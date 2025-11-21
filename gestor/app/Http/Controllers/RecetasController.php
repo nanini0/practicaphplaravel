@@ -66,7 +66,7 @@ class RecetasController extends Controller
 
     $receta->update($validate);
 
-    return redirect()->route('recetas.index')->with('success','Recetas Actualizada papu');
+    return redirect()->route('recetas.index')->with('success','Recetaa Actualizada papu');
     }
 
     /**
