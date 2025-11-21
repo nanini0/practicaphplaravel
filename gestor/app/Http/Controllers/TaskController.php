@@ -92,7 +92,7 @@ class TaskController extends Controller
      */
     public function destroy(string $id)
     {
-            $task = Task::findOrFail($id);
+        $task = Task::findOrFail($id);
         $task->delete();
 
         return redirect()->route('tasks.index')->with('success', 'Tarea eliminada');
