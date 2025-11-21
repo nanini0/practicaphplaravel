@@ -1,0 +1,61 @@
+make:model Task: Crea el Modelo, que es la representación en código de tu tabla de base de datos.
+
+-m: Crea automáticamente una Migración. Las migraciones son como el control de versiones de tu base de datos (te permiten crear y modificar tablas estructuradamente).
+Modelo + migración
+
+Migrar la base de datos
+
+Rutas
+
+Controlador
+
+Vistas
+
+Probar flujo
+
+Validaciones y mensajes
+
+
+Inicio
+  │
+  ▼
+Crear Modelo + Migración
+  │
+  ▼
+Configurar $fillable en el Modelo
+  │
+  ▼
+Ejecutar Migración (php artisan migrate)
+  │
+  ▼
+Crear Rutas
+  │
+  ▼
+Crear Controlador (php artisan make:controller ... --resource)
+  │
+  ▼
+Rellenar funciones CRUD en el Controlador
+  │       ┌───────────────┐
+  │       │ index()       │
+  │       │ create()      │
+  │       │ store()       │
+  │       │ show()        │
+  │       │ edit()        │
+  │       │ update()      │
+  │       │ destroy()     │
+  │       └───────────────┘
+  │
+  ▼
+Crear Vistas (index, create, edit, show)
+  │
+  ▼
+Probar flujo básico (crear, listar, editar, eliminar)
+  │
+  ▼
+Agregar validación y mensajes de éxito
+  │
+  ▼
+CRUD completo y funcional
+  │
+  ▼
+Fin
