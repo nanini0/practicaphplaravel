@@ -1,0 +1,69 @@
+/* Contenedor del formulario */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e6f2e6; /* verde claro */
+    border: 2px solid #4CAF50; /* borde verde */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+/* Labels */
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2e7d32; /* verde oscuro */
+}
+
+/* Inputs y textarea */
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Checkbox */
+form input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* checkbox un poco más grande */
+}
+
+/* Botones del formulario */
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en botones */
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Contenedor de ingredientes dinámicos */
+#ingredientes-container input {
+    margin-bottom: 5px;
+}
+
+/* Botón para agregar ingrediente */
+form button[type="button"] {
+    width: fit-content;
+    background-color: #81c784; /* verde más claro */
+}
+
+form button[type="button"]:hover {
+    background-color: #66bb6a;
+}

@@ -1,0 +1,32 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.in{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.grid-inicio{
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+}
+.inicio-tarjeta{
+    background-color: rgb(224, 221, 218);
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.inicio-tarjeta:hover{
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.inicio-tarjeta h2 {
+    margin-top: 0;
+    color: #c99e13;
+    font-size: 1.2rem;
+}

@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
+@vite(['resources/css/recetas/form.css',])
 
+<br>
 <form action="{{ route('recetas.update', $receta->id) }}" method="POST">
     @csrf
     @method('PUT')
@@ -21,8 +23,13 @@
 
     <label>Chef:</label>
     <input type="text" name="chef" value="{{ old('chef', $receta->chef) }}">
+    
+    <label>Destacada:</label>
+    <input type="checkbox" name="destacada" value="1">
 
     <button type="submit">Actualizar</button>
+
+    
 </form>
 
 <script>

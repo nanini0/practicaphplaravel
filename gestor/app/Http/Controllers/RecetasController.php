@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Recetas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class RecetasController extends Controller
 {
@@ -27,8 +28,10 @@ class RecetasController extends Controller
         'ingredientes'=>'required|array',
         'ingredientes.*' => 'string', 
         'descripcion'=> 'required|string',
-        'chef'=> 'required|string'
+        'chef'=> 'required|string',
+        'destacadas'=> 'nullable',
     ]);
+    $validate['destacada'] = $request->has('destacada');
     Recetas::create($validate);
     return redirect()->route('recetas.index')->with('success', 'Tarea creada correctamente.');
 
@@ -61,7 +64,8 @@ class RecetasController extends Controller
         'ingredientes'=>'required|array',
         'ingredientes.*' => 'string', 
         'descripcion'=> 'required|string',
-        'chef'=> 'required|string'
+        'chef'=> 'required|string',
+        'destacada'=> 'boolean',
     ]);
 
     $receta->update($validate);

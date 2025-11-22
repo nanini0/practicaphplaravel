@@ -1,5 +1,9 @@
 @extends('layouts.app')
 @section('content')
+
+@vite(['resources/css/recetas/form.css',])
+<br>
+
 <form action="{{ route('recetas.store') }}" method="POST">
     @csrf
     <label>Nombre:</label>
@@ -16,6 +20,8 @@
 
     <label>Chef:</label>
     <input type="text" name="chef">
+    <label>Destacada:</label>
+    <input type="checkbox" name="destacada" value="1">
 
     <button type="submit">Guardar</button>
 </form>

@@ -6,27 +6,33 @@
     <title>Recetario Laravel - @yield('title')</title>
     
     {{-- Estilos de Bootstrap (Solo para que se vea bien rápido) --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body>
 
     {{-- ESTE ES TU NAVBAR (Se repetirá en todas las páginas) --}}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('recetas.index') }}">👨‍🍳 Mi Recetario</a>
-            
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('recetas.index') }}">Listado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('recetas.create') }}">Nueva Receta</a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="navbar" style="background-color: #4CAF50; padding: 10px; border-radius: 5px;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand" href="/" style="color: white; font-weight: bold; font-size: 1.5rem; text-decoration: none;">Recetas Destacadas</a>
+        
+        <!-- Links centrados -->
+        <div class="collapse navbar-collapse" style="flex: 1; display: flex; justify-content: center;">
+            <ul class="navbar-nav" style="display: flex; list-style: none; gap: 30px; margin: 0; padding: 0;">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('recetas.index') }}" style="color: white; text-decoration: none; font-weight: bold;">Listado</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('recetas.create') }}" style="color: white; text-decoration: none; font-weight: bold;">Nueva Receta</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
+
 
     {{-- CONTENIDO DINÁMICO --}}
     <div class="container">
@@ -39,7 +45,7 @@
     </div>
 
     {{-- Footer común --}}
-    <footer class="text-center mt-5 py-3 text-muted">
+    <footer class="text-center ">
         <small></small>
     </footer>
 

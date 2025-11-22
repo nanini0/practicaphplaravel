@@ -9,7 +9,15 @@ class Recetas extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre','ingredientes','descripcion','chef'];
+    protected $fillable = ['nombre','ingredientes','descripcion','chef','destacada'];
 
-    protected $casts = ['ingredientes'=>'array']; // esto permite que Laravel lo trate como array
+    protected $casts = [
+        'ingredientes' => 'array',
+        'destacada' => 'boolean',
+    ]; // esto permite que Laravel lo trate como array
+
+    public function scopeDestacadas($query)
+    {
+        return $query->where('destacada', true);
+    }
 }

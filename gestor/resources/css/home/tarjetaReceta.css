@@ -1,0 +1,53 @@
+/* Contenedor de las tarjetas */
+.grid-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* espacio entre tarjetas */
+    margin-top: 20px;
+}
+
+/* Cada tarjeta */
+.tarjeta {
+    background-color: #fff; /* fondo blanco */
+    border: 1px solid #ddd; /* borde gris claro */
+    border-radius: 10px; /* esquinas redondeadas */
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* sombra suave */
+    transition: transform 0.2s, box-shadow 0.2s; /* animación al pasar el mouse */
+}
+
+/* Hover en la tarjeta */
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Título de la receta */
+.tarjeta h3 {
+    margin-top: 0;
+    color: #ff6600;
+    font-size: 1.2rem;
+}
+
+/* Información del chef */
+.tarjeta p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Botón o link de ver receta */
+.tarjeta a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.tarjeta a:hover {
+    background-color: #e65c00;
+}
